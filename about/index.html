@@ -1,0 +1,207 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="革新的なアイデアであなたの暮らしをもっと良くする。日本製鉄技巧。">
+    <meta name="keywords" content=",">
+    <!--ビューポート-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>会社案内 | 日本製鉄技巧</title>
+    <link rel="icon" href="../favicon.ico">
+    <link href="../css/reset.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body id="about">
+
+    <div class="wrap">
+
+
+        <div id="scroll_opacity">
+
+            <header class="head">
+
+                <div class="title_logo">
+                    <h1><a href="../index.html"><img src="../img/top_logo.png" alt=""></a></h1>
+                </div>
+
+                <nav>
+                    <ul>
+                        <li><a href="index.html">会社案内</a></li>
+                        <li><a href="../works/index.html">事業実績</a></li>
+                        <li><a href="../corporation/index.html">法人の方</a></li>
+                        <li><a href="../private/index.html">個人の方</a></li>
+                        <li><a href="../contact/index.html">お問い合わせ</a></li>
+
+                    </ul>
+                </nav>
+            </header>
+
+            <main>
+
+                <section>
+
+                    <div class="contents">
+                        <div class="imgbox">
+                            <img src="../img/about_image01.png" alt="">
+
+                        </div>
+
+                        <div class="textbox">
+                            <p>物に命を吹き込む。</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contents">
+
+                        <div class="textbox">
+                            <p>暮らしに革新を。</p>
+
+                        </div>
+
+                        <div class="imgbox">
+                            <img src="../img/about_image02.png" alt="">
+
+                        </div>
+
+                    </div>
+
+                    <div class="contents">
+
+                        <div class="imgbox">
+                            <img src="../img/about_image03.png" alt="">
+
+                        </div>
+
+
+                        <div class="textbox">
+                            <p>21世紀。<br>ドラえもんの居た未来を創る。</p>
+
+                        </div>
+
+                    </div>
+
+
+                    <h3 id="about_fade1">ABOUT</h3>
+                    <p id="about_fade2">会社案内</p>
+
+                    <div class="contents">
+
+
+                        <div class="textbox">
+                            <p id="underline01">日本製鉄技巧の仕事は、人々の快適や安全を保ち、長く愛用される</p>
+                            <p id="underline02">製品を創り、記憶に刻まれていく大きな大きなモノづくり。</p>
+                            <p id="underline03">百年もの間、茨城で数えきれないほどの実績をつくってきました。</p>
+
+                        </div>
+
+                    </div>
+
+                    <div class="contents">
+
+                        <div class="textbox">
+                            <p>代表取締役社長<br>二本　正哲</p>
+
+                        </div>
+
+                        <div class="imgbox">
+                            <img src="../img/about_image04.png" alt="">
+
+                        </div>
+
+                    </div>
+
+                    <div class="contents">
+
+
+                        <div class="textbox">
+                            <p>よい製品とは何か。
+                                それは価格であったり、耐久性であったり、デザインであったり、
+                                人によって様々な価値観が存在します。<br>
+                                作り手の"自己満足"ではなく、使う人のことを考える。<br>
+                                日本製鉄技巧では、そんなすべての人の
+                                価値観を満たすよう奮闘して参りました。<br>
+                                創業者の意思を100年経っても守り続けている。
+                                そんな、会社です。</p>
+
+                        </div>
+
+                    </div>
+
+
+
+
+                </section>
+
+
+
+            </main>
+
+
+            <footer>
+                <a href="../contact/index.html">お問い合わせ</a>
+                <h2>© 2020 日本製鉄技巧</h2>
+            </footer>
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <!--jQuery本体-->
+    <script src="../js/jquery-1.11.2.min.js"></script>
+
+    <!--即時関数-->
+    <script>
+        $(function() {
+
+            //セクションのh3とpフェードイン用
+
+            $(window).scroll(function() {
+                $("#about_fade1,#about_fade2").each(function() {
+                    var imgPos = $(this).offset().top;
+                    var scroll = $(window).scrollTop();
+                    var windowHeight = $(window).height();
+                    if (scroll > imgPos - windowHeight + windowHeight / 5) {
+                        $(this).addClass("about_in");
+                    } else {
+                        $(this).removeClass("about_in");
+                    }
+                });
+            });
+
+
+            //会社案内のアンダーライン用
+
+            $(window).scroll(function() {
+                $("#underline01,#underline02,#underline03").each(function() {
+                    var imgPos = $(this).offset().top;
+                    var scroll = $(window).scrollTop();
+                    var windowHeight = $(window).height();
+                    if (scroll > imgPos - windowHeight + windowHeight / 5) {
+                        $(this).addClass("underline_in");
+                    } else {
+                        $(this).removeClass("underline_in");
+                    }
+                });
+            });
+
+
+        });
+
+    </script>
+
+</body>
+
+</html>

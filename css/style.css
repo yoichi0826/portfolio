@@ -1,0 +1,647 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/****
+
+濃い青　#010440
+
+薄い青　#022340
+
+茶　#a6530a
+
+
+
+****/
+
+
+body {
+    text-shadow: 0 0 1px #777;
+    font-family: YuMincho, "Yu Mincho", 游ゴシック, 游明朝体, "ヒラギノ明朝 ProN", "Hiragino Mincho ProN", "ＭＳ 明朝", "MS Mincho", sans-serif;
+    animation: FadeIN 0.48s ease-out;
+}
+
+@keyframes FadeIN {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+img {
+    width: auto;
+    height: 100%;
+}
+
+.red {
+    color: red;
+}
+
+
+
+/****************************************下層ページ共通*************************************************/
+
+
+.head {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: white;
+    padding: 0px 50px;
+    box-shadow: 0 0 5px inset #777;
+    margin-bottom: 100px;
+}
+
+.head .title_logo h1 {
+    height: 100px;
+    padding: 10px 0;
+}
+
+
+main {
+    width: 100%;
+}
+
+section {
+    width: 100%;
+}
+
+section > h3 {
+    text-align: end;
+    font-weight: bold;
+    font-size: 48px;
+    color: white;
+    background-color: #010440;
+    width: 50%;
+    border-right: 72px double white;
+    padding-right: 24px;
+    transform-origin: left;
+    transition: 1s ease-out 3s;
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+section > p {
+    text-align: end;
+    font-weight: bold;
+    font-size: 16px;
+    color: #010440;
+    background-color: white;
+    width: 50%;
+    border-right: 72px double #010440;
+    padding-right: 24px;
+    transform-origin: right;
+    transition: 1s ease-out 3s;
+    opacity: 0;
+    transform: scaleX(0);
+    margin-bottom: 50px;
+}
+
+.about_in {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+
+.contents {
+    margin: 0 auto;
+    width: 960px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 200px;
+}
+
+.imgbox {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 0 5px #777;
+}
+
+.imgbox > img {
+    width: 100%;
+    height: 100%;
+    animation: ImgScale 15s linear infinite alternate;
+}
+
+@keyframes ImgScale {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+.textbox {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#underline01::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #a6530a;
+    transition: 1s linear;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+#underline01.underline_in::after {
+    transform: scaleX(1);
+}
+
+#underline02::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #a6530a;
+    transition: 1s linear 1s;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+#underline02.underline_in::after {
+    transform: scaleX(1);
+}
+
+#underline03::after {
+    content: "";
+    display: block;
+    height: 1px;
+    width: 100%;
+    background-color: #a6530a;
+    transition: 1s linear 2s;
+    transform-origin: left;
+    transform: scaleX(0);
+}
+
+#underline03.underline_in::after {
+    transform: scaleX(1);
+}
+
+footer > h2 {
+    font-weight: bold;
+    color: #010440;
+    position: absolute;
+    right: 5%;
+
+}
+
+/****************************************トップページ固有*************************************************/
+
+
+
+
+
+
+
+#top .wrap {
+    background-image: url(../img/wrap.png);
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+
+#scroll_opacity {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: .5s ease-out;
+}
+
+#scroll_opacity.opacity_in {
+    background-color: rgba(0, 0, 0, .3);
+}
+
+
+#top header {
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    top: 0;
+    right: 0;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: .5s ease-out;
+    padding: 0 50px;
+    box-shadow: 0 0 5px inset #777;
+}
+
+#top header.head_in {
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+
+.title_logo h1 > a {
+    text-decoration: none;
+    color: #022340;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+nav {
+    margin: 0 auto;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    width: 150px;
+    list-style: none;
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    color: #022340;
+    font-size: 14px;
+    transition: .24s;
+}
+
+nav ul li a:hover {
+    color: #a6530a;
+}
+
+#top .space {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+
+#top .space > ul {
+    display: flex;
+}
+
+#top .space > ul > li {
+    list-style: none;
+    color: #333;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+
+.Innovation > li:nth-of-type(1) {
+    opacity: 0;
+    animation: TextFade .24s ease-in-out .1s forwards;
+}
+
+.Innovation > li:nth-of-type(2) {
+    opacity: 0;
+    animation: TextFade .24s ease-in-out .2s forwards;
+}
+
+.Innovation > li:nth-of-type(3) {
+    opacity: 0;
+    animation: TextFade .24s ease-in-out .3s forwards;
+}
+
+.Innovation > li:nth-of-type(4) {
+    opacity: 0;
+    animation: TextFade .24s ease-in-out .4s forwards;
+}
+
+.Innovation > li:nth-of-type(5) {
+    opacity: 0;
+    animation: TextFade .24s ease-in-out .5s forwards;
+}
+
+.Innovation > li:nth-of-type(6) {
+    opacity: 0;
+    animation: TextFade .24s ease-in-out .6s forwards;
+}
+
+.Innovation > li:nth-of-type(7) {
+    opacity: 0;
+    animation: TextFade .24s ease-in-out .7s forwards;
+}
+
+.Innovation > li:nth-of-type(8) {
+    opacity: 0;
+    animation: TextFade .24s ease-in-out .8s forwards;
+}
+
+.Innovation > li:nth-of-type(9) {
+    opacity: 0;
+    animation: TextFade .24s ease-in-out .9s forwards;
+}
+
+.Innovation > li:nth-of-type(10) {
+    opacity: 0;
+    animation: TextFade .24s ease-in-out 1s forwards;
+}
+
+
+.Innovation {
+    position: absolute;
+    top: 11%;
+    right: 9%;
+}
+
+.for {
+    position: absolute;
+    top: 18%;
+    right: 12%;
+    animation: TextFade .48s ease-in-out 1.24s forwards;
+    opacity: 0;
+}
+
+.YourLife {
+    position: absolute;
+    top: 25%;
+    right: 5%;
+    animation: TextFade .72s ease-in-out 1.72s forwards;
+    opacity: 0;
+}
+
+.YourLife > li:nth-of-type(4) {
+    margin-right: .5em;
+}
+
+.YourLife::after {
+    position: absolute;
+    bottom: 0;
+    content: "";
+    width: 100%;
+    height: 3px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background-color: #a6530a;
+    animation: BorderFade .48s ease-out 2.24s forwards;
+}
+
+
+@keyframes TextFade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+@keyframes BorderFade {
+    0% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+
+
+
+
+.ImgScroll {
+    position: absolute;
+    top: 40%;
+    right: 5%;
+    animation: ScrollFade.72s ease-out 2.72s infinite alternate;
+    opacity: 0;
+}
+
+@keyframes ScrollFade {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+.ImgLogo {
+    position: absolute;
+    top: 3%;
+    left: 3%;
+}
+
+.ImgLogo > img {
+    width: 150px;
+    height: auto;
+
+}
+
+
+
+
+
+
+#top main {
+    width: 100%;
+    overflow: auto;
+}
+
+
+
+
+#top section {
+    width: 100%;
+    margin-bottom: 200px;
+    overflow: hidden;
+}
+
+#top section:last-child {
+    margin-bottom: 0px;
+
+}
+
+
+#top section > h2 {
+    background-color: #010440;
+    color: white;
+    padding: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    transition: all .72s ease-in-out;
+    transform: scaleX(0);
+    opacity: 0;
+    box-shadow: 0 0 5px inset #777;
+}
+
+#top section > h2.section_in {
+    transform: scaleX(1);
+    opacity: 1
+}
+
+
+#top .contents {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#top .ImgBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 300px;
+    transition: all .72s ease-in-out;
+    transition-delay: .3s;
+    opacity: 0;
+    background-color: white;
+}
+
+
+#top .ImgBox.section_ImgBox {
+    opacity: 1;
+}
+
+#top .TextBox {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    height: 300px;
+    padding: 20px;
+    transition: all .72s ease-in-out;
+    transition-delay: .5s;
+    opacity: 0;
+    transform: translateX(100px);
+}
+
+#top .TextBox.section_TextBox {
+    opacity: 1;
+    transform: translateX(0px);
+}
+
+#top .TextBox h3 {
+    text-align: center;
+    color: #010440;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#top .TextBox p {
+    color: #022340;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+#top .TextBox a {
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: bold;
+    background-color: darkcyan;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 5px 10px;
+    transition: .24s;
+}
+
+#top .TextBox a:hover {
+    opacity: .75;
+}
+
+footer {
+    width: 100%;
+    padding: 100px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+footer > a {
+    text-align: center;
+    width: 300px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    background-color: #010440;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 10px;
+    transition: .24s;
+    position: relative;
+}
+
+footer > a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, .25);
+    opacity: 0;
+}
+
+footer a:hover::before {
+    opacity: 1;
+}
+
+#top footer > h2 {
+    font-weight: bold;
+    color: aliceblue;
+    position: absolute;
+    right: 5%;
+
+}
+
+
+
+
+
+
+/* タブレットレイアウト : 768 px以下。PCレイアウトからスタイルを継承。 */
+
+@media only screen and (max-width: 768px) {
+
+    img,
+    object,
+    embed,
+    video {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* モバイルレイアウト : 480 px 以下。PCレイアウト、タブレットレイアウトからスタイルを継承。 */
+
+@media only screen and (max-width: 480px) {}
