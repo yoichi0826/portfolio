@@ -1,0 +1,739 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+    font-family: 'Avenir', 'Helvetica Neue', 'Helvetica', 'Arial', 'Hiragino Sans', 'ヒラギノ角ゴシック', YuGothic, 'Yu Gothic', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic';
+    animation: BodyFadeIN .48s ease-in-out;
+}
+
+@keyframes BodyFadeIN {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/********************************wrapまとめ***********************************/
+
+
+.wrap1 {
+    height: 1500px;
+    background-image: url(../img/top/building1.png);
+    background-position: 50% 60%;
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    padding: 50px;
+    animation: TownMove 120s linear infinite;
+
+}
+
+
+
+.wrap2 {
+    height: 1000px;
+    background-image: url(../img/top/building2.png);
+    background-position: 50% 60%;
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    padding: 50px;
+    background-color: skyblue;
+    animation: TownMove 120s linear infinite;
+}
+
+
+.wrap3 {
+    height: 2500px;
+    background-image: url(../img/top/building3.png);
+    background-position: 50% 60%;
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    padding: 50px;
+    background-color: antiquewhite;
+    animation: TownMove 120s linear infinite;
+
+}
+
+
+.wrap4 {
+    height: 1000px;
+    background-image: url(../img/top/building4.png);
+    background-position: 50% 60%;
+    background-repeat: repeat-x;
+    background-attachment: fixed;
+    padding: 50px;
+    background-color: #777;
+    animation: TownMove 120s linear infinite;
+}
+
+
+@keyframes TownMove {
+    0% {
+        background-position: 50% 60%;
+    }
+
+    100% {
+        background-position: -150% 60%;
+    }
+}
+
+
+/********************************月と太陽***********************************/
+
+
+.moon {
+    width: 150px;
+    margin: 0 0 0 auto;
+    position: sticky;
+    top: 50px;
+}
+
+.moon img {
+    animation: Moon 3s ease-in-out infinite alternate;
+}
+
+@keyframes Moon {
+    0% {
+        transform: rotate(-15deg);
+    }
+
+
+    100% {
+        transform: rotate(15deg);
+    }
+}
+
+
+/*******太陽*******/
+
+.sun {
+    width: 150px;
+    margin: 0 0 0 auto;
+    position: sticky;
+    top: 50px;
+}
+
+.sun img {
+    animation: Sun 10s linear infinite;
+}
+
+@keyframes Sun {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/********************************ヘッダー***********************************/
+
+header {
+    position: fixed;
+    top: 10%;
+    left: 5%;
+    width: 400px;
+    height: 600px;
+    background-image: url(../img/top/images04.png);
+    padding-top: 50px;
+    box-shadow: 0 0 5px #777;
+
+}
+
+
+nav ul {
+    width: 6em;
+    margin: 0 auto;
+}
+
+nav li {
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+nav li:nth-of-type(1) {
+    width: 4em;
+}
+
+nav li:nth-of-type(2) {
+    width: 4em;
+}
+
+nav li:nth-of-type(3) {
+    width: 3em;
+}
+
+nav li:nth-of-type(4) {
+    width: 6em;
+    margin-bottom: 0px;
+}
+
+
+nav li a {
+    display: block;
+    text-decoration: none;
+    color: #777;
+    font-weight: bold;
+}
+
+nav li a::after {
+    display: block;
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: orange;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .24s;
+}
+
+nav li a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+
+
+/********************************人間歩く***********************************/
+
+.human img {
+    height: 150px;
+    animation: Walk 60s linear infinite;
+}
+
+@keyframes Walk {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(1500px);
+    }
+}
+
+/********************************コピーライト***********************************/
+
+.copyright {
+    margin-top: 125px;
+}
+
+.copyright p {
+    text-align: center;
+    color: #777;
+}
+
+
+
+
+
+/********************************コンテンツ**********************************/
+
+.main {
+    margin: 0 0 0 auto;
+    width: 960px;
+    height: 720px;
+
+}
+
+/******************コンテンツ１******************************/
+
+.contents1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contents1 > p {
+    line-height: 3em;
+    margin-bottom: 100px;
+    background-color: white;
+    padding: 0em 1em;
+    border-radius: 10px;
+}
+
+.contents1 .textbox {
+    position: relative;
+    padding: 1.5em 1em;
+    border: solid 3px #95ccff;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-bottom: 100px;
+}
+
+.contents1 .textbox .boxtitle {
+    position: absolute;
+    display: inline-block;
+    top: -15px;
+    left: 10px;
+    padding: 0 10px;
+    line-height: 1;
+    font-size: 20px;
+    background: #FFF;
+    color: #95ccff;
+    font-weight: bold;
+}
+
+
+
+
+/******************コンテンツ2******************************/
+
+.contents2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contents2 .textbox {
+    position: relative;
+    padding: 1.5em 1em;
+    border: solid 3px white;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-bottom: 200px;
+    color: white;
+}
+
+.contents2 .textbox .boxtitle {
+    position: absolute;
+    display: inline-block;
+    top: -15px;
+    left: 10px;
+    padding: 0 10px;
+    line-height: 1;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    background-color: skyblue;
+}
+
+.command {
+    display: flex;
+}
+
+.command ul {
+    margin-right: 1em;
+}
+
+.command ul li {
+    list-style: none;
+    margin-bottom: .5em;
+}
+
+.command ul li:last-child {
+    margin-bottom: 0px;
+}
+
+
+.command ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+
+}
+
+.command ul li a::before {
+    display: inline-block;
+    content: "▶";
+    margin-right: .5em;
+    opacity: 0;
+}
+
+.command ul li a:hover::before {
+    opacity: 1;
+}
+
+
+
+
+/******************コンテンツ3******************************/
+
+.contents3 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contents3 .textbox {
+    position: relative;
+    padding: 1.5em 1em;
+    border: solid 3px indianred;
+    border-radius: 10px;
+    font-size: 16px;
+    margin-bottom: 200px;
+
+}
+
+.contents3 .textbox .boxtitle {
+    position: absolute;
+    display: inline-block;
+    top: -15px;
+    left: 10px;
+    padding: 0 10px;
+    line-height: 1;
+    font-size: 20px;
+    color: indianred;
+    font-weight: bold;
+    background-color: antiquewhite;
+}
+
+
+
+.contents3 .textbox a {
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    box-shadow: 0 0 5px #777;
+
+}
+
+
+
+
+/******************コンテンツ4******************************/
+
+.contents4 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contents4 .textbox {
+    position: relative;
+    padding: 1.5em 1em;
+    border: solid 3px lightgoldenrodyellow;
+    border-radius: 10px;
+    font-size: 16px;
+    color: lightgoldenrodyellow;
+
+}
+
+.contents4 .textbox p {
+    font-weight: bold;
+
+}
+
+.contents4 .textbox .boxtitle {
+    position: absolute;
+    display: inline-block;
+    top: -15px;
+    left: 10px;
+    padding: 0 10px;
+    line-height: 1;
+    font-size: 20px;
+    color: lightgoldenrodyellow;
+    font-weight: bold;
+    background-color: #777;
+}
+
+
+
+/********************************jQueryクラス付与**********************************/
+
+
+#fade1 {
+    opacity: 0;
+    transition: 1s ease-in;
+}
+
+#fade2 {
+    font-weight: bold;
+    opacity: 0;
+    transition: 1s ease-in;
+    text-shadow: 0 0 1px white;
+}
+
+#fade3 {
+    opacity: 0;
+    transition: 1s ease-in;
+}
+
+#fade4 {
+    opacity: 0;
+    transform: translateX(300px);
+    transition: .5s ease-in;
+    margin-bottom: 0px;
+}
+
+#fade5 {
+    opacity: 0;
+    transform: translateX(-300px);
+    transition: .5s ease-in;
+}
+
+#fade6 {
+    opacity: 0;
+    transform: translateX(-300px);
+    transition: 1s ease-in;
+    border-radius: 10px;
+    border: 3px solid white;
+    background-color: rgba(0, 0, 0, .5);
+    color: white;
+    font-weight: bold;
+    padding: 30px;
+}
+
+#fade7 {
+    opacity: 0;
+    transform: translateX(300px);
+    transition: .5s ease-in;
+    border-color: darkblue;
+}
+
+#fade7 > h2 {
+    color: darkblue;
+}
+
+#fade8 {
+    opacity: 0;
+    transform: translateX(300px);
+    transition: .5s ease-in;
+    border-color: indianred;
+}
+
+#fade8 > h2 {
+    color: indianred;
+}
+
+
+#fade9 {
+    opacity: 0;
+    transform: translateX(300px);
+    transition: .5s ease-in;
+    border-color: coral;
+}
+
+#fade9 > h2 {
+    color: coral;
+}
+
+#fade10 {
+    opacity: 0;
+    transform: translateX(300px);
+    transition: .5s ease-in;
+    border-color: pink;
+}
+
+#fade10 > h2 {
+    color: pink;
+}
+
+
+#fade11 {
+    opacity: 0;
+    transform: translateX(-300px);
+    transition: 1s ease-in;
+    border-radius: 10px;
+    border: 3px solid white;
+    background-color: rgba(0, 0, 0, .5);
+    color: white;
+    font-weight: bold;
+    padding: 30px;
+    margin-bottom: 100px;
+}
+
+
+#fade12 {
+    opacity: 0;
+    transform: scaleX(0);
+    transition: .5s ease-in;
+
+}
+
+
+#fade13 {
+    opacity: 0;
+    transition: 1s ease-in;
+
+}
+
+#fade14 {
+    margin-top: 100px;
+    opacity: 0;
+    transition: .24s ease-in;
+    font-size: 20px;
+    transform: scaleX(0);
+}
+
+#fade1.fade_in {
+    opacity: 1;
+    transform: translate(0);
+}
+
+#fade2.fade_in {
+    opacity: 1;
+    transform: translate(0);
+}
+
+#fade3.fade_in {
+    opacity: 1;
+    transform: translate(0);
+}
+
+#fade4.fade_in {
+    opacity: 1;
+    transform: translate(0);
+}
+
+#fade5.fade_in {
+    opacity: 1;
+    transform: translate(0);
+}
+
+#fade6.fade_in {
+    opacity: 1;
+    transform: translate(0);
+}
+
+#fade7.fade_in {
+    opacity: 1;
+    transform: translate(0);
+}
+
+#fade8.fade_in {
+    opacity: 1;
+    transform: translate(0);
+}
+
+#fade9.fade_in {
+    opacity: 1;
+    transform: translate(0);
+}
+
+#fade10.fade_in {
+    opacity: 1;
+    transform: translate(0);
+}
+
+#fade11.fade_in {
+    opacity: 1;
+    transform: translate(0);
+}
+
+#fade12.fade_in {
+    opacity: 1;
+    transform: translate(0);
+    transform: scaleX(1);
+}
+
+#fade13.fade_in {
+    opacity: 1;
+    transform: translate(0);
+}
+
+#fade14.fade_in {
+    opacity: 1;
+    transform: translate(0);
+    transform: scaleX(1);
+}
+
+
+
+
+/********************************モーダル**********************************/
+
+
+
+
+.modaal-content-container {
+    border: solid 3px white;
+    border-radius: 10px;
+}
+
+.modaal-content-container p {
+    color: white;
+    font-weight: bold;
+}
+
+.modaal-content-container .spellbox {
+    display: flex;
+    justify-content: center;
+}
+
+.spellbox ul {
+    width: 30%;
+}
+
+.spellbox li {
+    color: white;
+    list-style: none;
+    font-weight: bold;
+    margin-bottom: 1em;
+    height: 2em;
+    display: flex;
+    align-items: center;
+}
+
+.spellbox li:last-child {
+    margin-bottom: 0em;
+}
+
+
+
+/* タブレットレイアウト : 768 px以下。PCレイアウトからスタイルを継承。 */
+
+@media only screen and (max-width: 768px) {
+
+    img,
+    object,
+    embed,
+    video {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/* モバイルレイアウト : 480 px 以下。PCレイアウト、タブレットレイアウトからスタイルを継承。 */
+
+@media only screen and (max-width: 480px) {
+
+
+
+    .wrap1 {
+        padding: 0px;
+
+    }
+
+    .wrap2 {
+        padding: 0px;
+
+    }
+
+    .wrap3 {
+        padding: 0px;
+
+    }
+
+    .wrap4 {
+        padding: 0px;
+
+    }
+
+    header {
+        display: none;
+    }
+
+
+
+
+
+}
