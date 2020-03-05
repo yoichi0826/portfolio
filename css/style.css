@@ -30,7 +30,7 @@ body::-webkit-scrollbar {
     background-position: 50% 60%;
     background-repeat: repeat-x;
     background-attachment: fixed;
-    padding: 50px 50px 200px 50px;
+    padding: 50px 50px 0px 50px;
     animation: TownMove 120s linear infinite;
 
 }
@@ -42,7 +42,7 @@ body::-webkit-scrollbar {
     background-position: 50% 60%;
     background-repeat: repeat-x;
     background-attachment: fixed;
-    padding: 50px 50px 200px 50px;
+    padding: 50px 50px 0px 50px;
     background-color: skyblue;
     animation: TownMove 120s linear infinite;
 }
@@ -53,7 +53,7 @@ body::-webkit-scrollbar {
     background-position: 50% 60%;
     background-repeat: repeat-x;
     background-attachment: fixed;
-    padding: 50px 50px 200px 50px;
+    padding: 50px 50px 0px 50px;
     background-color: antiquewhite;
     animation: TownMove 120s linear infinite;
 
@@ -65,7 +65,7 @@ body::-webkit-scrollbar {
     background-position: 50% 60%;
     background-repeat: repeat-x;
     background-attachment: fixed;
-    padding: 50px 50px 200px 50px;
+    padding: 50px 50px 0px 50px;
     background-color: #777;
     animation: TownMove 120s linear infinite;
 }
@@ -240,6 +240,7 @@ nav li a:hover::after {
 
 .main {
     margin: 0 0 0 auto;
+    padding-bottom: 200px;
     width: 70%;
 
 }
