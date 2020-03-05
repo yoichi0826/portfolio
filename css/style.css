@@ -142,10 +142,10 @@ body::-webkit-scrollbar {
 header {
     position: fixed;
     top: 10%;
+    bottom: 10%;
     left: 5%;
-    width: 400px;
-    height: 600px;
     background-image: url(../img/top/images04.png);
+    background-size: cover;
     padding-top: 50px;
     box-shadow: 0 0 5px #777;
 
@@ -241,7 +241,7 @@ nav li a:hover::after {
 
 .main {
     margin: 0 0 0 auto;
-    width: 960px;
+    width: 80%;
     height: 720px;
 
 }
@@ -483,7 +483,7 @@ nav li a:hover::after {
 #fade6 {
     opacity: 0;
     transform: translateX(-300px);
-    transition: 1s ease-in;
+    transition: .5s ease-in;
     border-radius: 10px;
     border: 3px solid white;
     background-color: rgba(0, 0, 0, .5);
@@ -541,7 +541,7 @@ nav li a:hover::after {
 #fade11 {
     opacity: 0;
     transform: translateX(-300px);
-    transition: 1s ease-in;
+    transition: .5s ease-in;
     border-radius: 10px;
     border: 3px solid white;
     background-color: rgba(0, 0, 0, .5);
@@ -555,7 +555,7 @@ nav li a:hover::after {
 #fade12 {
     opacity: 0;
     transform: scaleX(0);
-    transition: .5s ease-in;
+    transition: 1s ease-in;
 
 }
 
@@ -569,8 +569,7 @@ nav li a:hover::after {
 #fade14 {
     margin-top: 100px;
     opacity: 0;
-    transform: translateX(-300px);
-    transition: 1s ease-in;
+    transition: 1s ease-in 1s;
     border-radius: 10px;
     border: 3px solid white;
     background-color: rgba(0, 0, 0, .5);
