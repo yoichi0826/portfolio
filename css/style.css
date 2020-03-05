@@ -56,7 +56,6 @@ body::-webkit-scrollbar {
     padding: 50px 50px 0px 50px;
     background-color: antiquewhite;
     animation: TownMove 120s linear infinite;
-
 }
 
 
@@ -555,10 +554,11 @@ nav li a:hover::after {
 #fade12 {
     opacity: 0;
     transform: scaleX(0);
-    transition: 1s ease-in;
+    transition: .5s ease-in;
 
 }
 
+/********************fade13はひっさつボタン用**************************/
 
 #fade13 {
     opacity: 0;
@@ -569,7 +569,7 @@ nav li a:hover::after {
 #fade14 {
     margin-top: 100px;
     opacity: 0;
-    transition: 1s ease-in 1s;
+    transition: 1s ease-in;
     border-radius: 10px;
     border: 3px solid white;
     background-color: rgba(0, 0, 0, .5);
