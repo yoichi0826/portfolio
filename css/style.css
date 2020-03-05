@@ -26,12 +26,11 @@ body::-webkit-scrollbar {
 
 
 .wrap1 {
-    height: 1500px;
     background-image: url(../img/top/building1.png);
     background-position: 50% 60%;
     background-repeat: repeat-x;
     background-attachment: fixed;
-    padding: 50px;
+    padding: 50px 50px 200px 50px;
     animation: TownMove 120s linear infinite;
 
 }
@@ -39,24 +38,22 @@ body::-webkit-scrollbar {
 
 
 .wrap2 {
-    height: 1000px;
     background-image: url(../img/top/building2.png);
     background-position: 50% 60%;
     background-repeat: repeat-x;
     background-attachment: fixed;
-    padding: 50px;
+    padding: 50px 50px 200px 50px;
     background-color: skyblue;
     animation: TownMove 120s linear infinite;
 }
 
 
 .wrap3 {
-    height: 2500px;
     background-image: url(../img/top/building3.png);
     background-position: 50% 60%;
     background-repeat: repeat-x;
     background-attachment: fixed;
-    padding: 50px;
+    padding: 50px 50px 200px 50px;
     background-color: antiquewhite;
     animation: TownMove 120s linear infinite;
 
@@ -64,12 +61,11 @@ body::-webkit-scrollbar {
 
 
 .wrap4 {
-    height: 1000px;
     background-image: url(../img/top/building4.png);
     background-position: 50% 60%;
     background-repeat: repeat-x;
     background-attachment: fixed;
-    padding: 50px;
+    padding: 50px 50px 200px 50px;
     background-color: #777;
     animation: TownMove 120s linear infinite;
 }
@@ -225,7 +221,10 @@ nav li a:hover::after {
 /********************************コピーライト***********************************/
 
 .copyright {
-    margin-top: 125px;
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    right: 0;
 }
 
 .copyright p {
@@ -241,8 +240,7 @@ nav li a:hover::after {
 
 .main {
     margin: 0 0 0 auto;
-    width: 80%;
-    height: 720px;
+    width: 70%;
 
 }
 
@@ -531,6 +529,7 @@ nav li a:hover::after {
     transform: translateX(300px);
     transition: .5s ease-in;
     border-color: pink;
+    margin-bottom: 0px;
 }
 
 #fade10 > h2 {
