@@ -62,7 +62,7 @@
 
 
             $(window).scroll(function() {
-                $("#fade13").each(function() {
+                $("#fade13,#fade15").each(function() {
                     var imgPos = $(this).offset().top;
                     var scroll = $(window).scrollTop();
                     var windowHeight = $("html,body").height();
@@ -97,11 +97,25 @@
             });
 
 
+            $('.Toggle').click(function() {
+                $(this).toggleClass('active');
 
+                if ($(this).hasClass('active')) {
+                    $('.NavMenu').addClass('active'); //クラスを付与
+                } else {
+                    $('.NavMenu').removeClass('active'); //クラスを外す
+                }
+            });
+
+
+            $('.NavMenu ul li a').on('click', function() {
+                if (window.innerWidth <= 768) {
+                    $('.Toggle').click();
+                }
+            });
 
 
         });
-
     </script>
 
 
@@ -109,28 +123,51 @@
 
 <body>
 
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#scroll_battle">たたかう</a></li>
+                <li><a href="#scroll_tactics">さくひん</a></li>
+                <li><a href="#scroll_escape">にげる</a></li>
+                <li><a href="#scroll_top" id="fade13">リスタート</a></li>
+            </ul>
+        </nav>
+
+
+
+        <div class="copyright">
+            <p>© 2020 Yoichiro Tanaka</p>
+        </div>
+
+    </header>
+
+    <div class="SmartPhone">
+
+        <!-- ナビメニュー部分 -->
+        <div class="NavMenu">
+            <ul>
+                <li><a href="#scroll_battle">たたかう</a></li>
+                <li><a href="#scroll_tactics">さくひん</a></li>
+                <li><a href="#scroll_escape">にげる</a></li>
+                <li><a href="#scroll_top" id="fade15">リスタート</a></li>
+            </ul>
+        </div>
+        <!-- ハンバーガーメニュー部分 -->
+        <div class="Toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+    </div>
+
+
+    <div class="human">
+        <img src="img/top/human.gif" alt="">
+
+    </div>
+
     <div class="wrap1" id="scroll_top">
-
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="#scroll_battle">たたかう</a></li>
-                    <li><a href="#scroll_tactics">さくひん</a></li>
-                    <li><a href="#scroll_escape">にげる</a></li>
-                    <li><a href="#scroll_top" id="fade13">ひっさつ</a></li>
-                </ul>
-            </nav>
-
-            <div class="human">
-                <img src="img/top/human.gif" alt="">
-
-            </div>
-
-            <div class="copyright">
-                <p>© 2020 Yoichiro Tanaka</p>
-            </div>
-
-        </header>
 
         <div class="moon"><img src="img/top/moon.png" alt=""></div>
 
@@ -475,6 +512,4 @@
 
 
 
-</body>
-
-</html>
+</body></html>

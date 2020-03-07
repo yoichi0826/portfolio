@@ -22,15 +22,20 @@ body::-webkit-scrollbar {
     display: none;
 }
 
+.SmartPhone {
+    display: none;
+}
+
+
 /********************************wrapまとめ***********************************/
 
 
 .wrap1 {
+    width: 100%;
     background-image: url(../img/top/building1.png);
     background-position: 50% 60%;
     background-repeat: repeat-x;
     background-attachment: fixed;
-    padding: 50px 50px 0px 50px;
     animation: TownMove 120s linear infinite;
 
 }
@@ -38,33 +43,33 @@ body::-webkit-scrollbar {
 
 
 .wrap2 {
+    width: 100%;
     background-image: url(../img/top/building2.png);
     background-position: 50% 60%;
     background-repeat: repeat-x;
     background-attachment: fixed;
-    padding: 50px 50px 0px 50px;
     background-color: skyblue;
     animation: TownMove 120s linear infinite;
 }
 
 
 .wrap3 {
+    width: 100%;
     background-image: url(../img/top/building3.png);
     background-position: 50% 60%;
     background-repeat: repeat-x;
     background-attachment: fixed;
-    padding: 50px 50px 0px 50px;
     background-color: antiquewhite;
     animation: TownMove 120s linear infinite;
 }
 
 
 .wrap4 {
+    width: 100%;
     background-image: url(../img/top/building4.png);
     background-position: 50% 60%;
     background-repeat: repeat-x;
     background-attachment: fixed;
-    padding: 50px 50px 0px 50px;
     background-color: #777;
     animation: TownMove 120s linear infinite;
 }
@@ -85,10 +90,13 @@ body::-webkit-scrollbar {
 
 
 .moon {
-    width: 150px;
-    margin: 0 0 0 auto;
     position: sticky;
-    top: 50px;
+    top: 0px;
+    padding-top: 2.5%;
+    padding-right: 2.5%;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .moon img {
@@ -97,12 +105,12 @@ body::-webkit-scrollbar {
 
 @keyframes Moon {
     0% {
-        transform: rotate(-15deg);
+        transform: rotate(-30deg);
     }
 
 
     100% {
-        transform: rotate(15deg);
+        transform: rotate(30deg);
     }
 }
 
@@ -110,10 +118,13 @@ body::-webkit-scrollbar {
 /*******太陽*******/
 
 .sun {
-    width: 150px;
-    margin: 0 0 0 auto;
     position: sticky;
-    top: 50px;
+    top: 0px;
+    padding-top: 2.5%;
+    padding-right: 2.5%;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .sun img {
@@ -139,68 +150,56 @@ header {
     top: 10%;
     bottom: 10%;
     left: 5%;
-    background-image: url(../img/top/images04.png);
-    background-size: cover;
-    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    border: 3px solid white;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 30px;
     box-shadow: 0 0 5px #777;
 
 }
 
-
-nav ul {
-    width: 4em;
-    margin: 0 auto;
-}
-
 nav li {
+    width: 120px;
+    margin: 0 auto;
     list-style: none;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
-nav li:nth-of-type(1) {
-    width: 4em;
-}
-
-nav li:nth-of-type(2) {
-    width: 4em;
-}
-
-nav li:nth-of-type(3) {
-    width: 3em;
-}
-
-nav li:nth-of-type(4) {
-    width: 4em;
-    margin-bottom: 0px;
-}
 
 
 nav li a {
     display: block;
     text-decoration: none;
-    color: #777;
+    color: white;
     font-weight: bold;
 }
 
-nav li a::after {
-    display: block;
-    content: "";
-    height: 2px;
-    width: 100%;
-    background-color: orange;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform .24s;
+nav li a::before {
+    display: inline-block;
+    content: "▶";
+    margin-right: .5em;
+    opacity: 0;
 }
 
-nav li a:hover::after {
-    transform-origin: left;
-    transform: scaleX(1);
+nav li a:hover::before {
+    opacity: 1;
 }
+
 
 
 
 /********************************人間歩く***********************************/
+
+.human {
+    position: fixed;
+    width: 80%;
+    right: 0;
+    top: 50%;
+    overflow: hidden;
+}
 
 .human img {
     height: 150px;
@@ -213,22 +212,16 @@ nav li a:hover::after {
     }
 
     100% {
-        transform: translateX(1500px);
+        transform: translateX(80vw);
     }
 }
 
 /********************************コピーライト***********************************/
 
-.copyright {
-    position: absolute;
-    bottom: 5%;
-    left: 0;
-    right: 0;
-}
+.copyright {}
 
 .copyright p {
-    text-align: center;
-    color: #777;
+    color: white;
 }
 
 
@@ -238,9 +231,11 @@ nav li a:hover::after {
 /********************************コンテンツ**********************************/
 
 .main {
+    overflow: hidden;
     margin: 0 0 0 auto;
+    padding-top: 50px;
     padding-bottom: 200px;
-    width: 70%;
+    width: 75%;
 
 }
 
@@ -578,6 +573,12 @@ nav li a:hover::after {
     padding: 30px;
 }
 
+#fade15 {
+    opacity: 0;
+    transition: 1s ease-in;
+
+}
+
 #fade1.fade_in {
     opacity: 1;
     transform: translate(0);
@@ -650,6 +651,12 @@ nav li a:hover::after {
     transform: scaleX(1);
 }
 
+#fade15.fade_in {
+    opacity: 1;
+    transform: translate(0);
+    transform: scaleX(1);
+}
+
 
 
 
@@ -704,6 +711,254 @@ nav li a:hover::after {
         max-width: 100%;
         height: auto;
     }
+
+
+    header {
+        display: none;
+    }
+
+    .SmartPhone {
+        display: block;
+    }
+
+    /*ナビメニューのスタイルを指定*/
+    .NavMenu {
+        position: fixed;
+        /*表示位置を固定*/
+        z-index: 2;
+        /*重ね順を変更*/
+        bottom: 2.5%;
+        left: 5%;
+        /*表示位置を指定*/
+        padding: 30px;
+        border-radius: 10px;
+        border: 3px solid white;
+        background-color: rgba(0, 0, 0, .5);
+        /*テキストを中央揃え*/
+        width: 50%;
+        /*全幅表示*/
+        height: auto;
+        opacity: 0;
+        transform: translateX(-100%);
+        /*ナビを上に隠す*/
+        transition: .35s ease-in;
+        /*アニメーションの時間を指定*/
+    }
+
+    .NavMenu ul {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .NavMenu ul li {
+        font-size: 1em;
+        list-style-type: none;
+        width: 120px;
+        margin-bottom: 50px;
+    }
+
+    .NavMenu ul li:last-child {
+        margin-bottom: 0px;
+    }
+
+    .NavMenu ul li a {
+        display: block;
+        /*クリックできる領域を広げる*/
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+
+    .NavMenu ul li a::before {
+        display: inline-block;
+        content: "▶";
+        margin-right: .5em;
+        opacity: 0;
+    }
+
+    .NavMenu ul li a:hover::before {
+        opacity: 1;
+    }
+
+
+
+    /*トグルボタンが押されたときに付与するクラス*/
+    .NavMenu.active {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    /*トグルボタンのスタイルを指定*/
+    .Toggle {
+        display: block;
+        position: fixed;
+        /* bodyに対しての絶対位置指定 */
+        right: 13px;
+        bottom: 12px;
+        width: 42px;
+        height: 42px;
+        cursor: pointer;
+        z-index: 3;
+    }
+
+    .Toggle span {
+        display: block;
+        position: absolute;
+        width: 30px;
+        border-bottom: solid 3px #000;
+        -webkit-transition: .35s ease-in-out;
+        /*変化の速度を指定*/
+        -moz-transition: .35s ease-in-out;
+        /*変化の速度を指定*/
+        transition: .35s ease-in-out;
+        /*変化の速度を指定*/
+        left: 6px;
+    }
+
+    .Toggle span:nth-child(1) {
+        top: 9px;
+    }
+
+    .Toggle span:nth-child(2) {
+        top: 18px;
+    }
+
+    .Toggle span:nth-child(3) {
+        top: 27px;
+    }
+
+    /* 最初のspanをマイナス45度に */
+    .Toggle.active span:nth-child(1) {
+        top: 18px;
+        left: 6px;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+    }
+
+    /* 2番目と3番目のspanを45度に */
+    .Toggle.active span:nth-child(2),
+    .Toggle.active span:nth-child(3) {
+        top: 18px;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    /********************************人間歩く***********************************/
+
+    .human {
+        position: fixed;
+        width: 100%;
+        left: 0;
+    }
+
+    .human img {
+        height: 150px;
+        animation: mobileWalk 20s linear infinite;
+    }
+
+
+    @keyframes mobileWalk {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(80vw);
+        }
+    }
+
+
+
+    /********************************wrapまとめ***********************************/
+
+
+    .wrap1 {
+        animation: mobileTownMove 30s linear infinite;
+
+    }
+
+
+
+    .wrap2 {
+        animation: mobileTownMove 30s linear infinite;
+    }
+
+
+    .wrap3 {
+        animation: mobileTownMove 30s linear infinite;
+    }
+
+
+    .wrap4 {
+        animation: mobileTownMove 30s linear infinite;
+    }
+
+
+    @keyframes mobileTownMove {
+        0% {
+            background-position: 50% 60%;
+        }
+
+        100% {
+            background-position: 150% 60%;
+        }
+    }
+
+    .moon {
+        padding-top: 0%;
+        padding-right: 0%;
+
+    }
+
+
+    .sun {
+
+        padding-top: 0%;
+        padding-right: 0%;
+    }
+
+
+    .main {
+        margin: 0 auto;
+        padding-bottom: 200px;
+        width: 90%;
+
+    }
+
+
+    .modaal-content-container {
+        height: 100%;
+        max-height: 60vh;
+        overflow: auto;
+
+    }
+
+
+    .modaal-content-container .spellbox {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .spellbox ul {
+        width: 100%;
+        margin-bottom: 1em;
+    }
+
+    .spellbox ul:last-child {
+        margin-bottom: 0px;
+    }
+
+    .spellbox li {}
+
+
+
 }
 
 /* モバイルレイアウト : 480 px 以下。PCレイアウト、タブレットレイアウトからスタイルを継承。 */
