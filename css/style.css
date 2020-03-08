@@ -797,8 +797,8 @@ nav li a:hover::before {
         display: block;
         position: fixed;
         /* bodyに対しての絶対位置指定 */
-        right: 13px;
-        bottom: 12px;
+        right: 5%;
+        bottom: 2.5%;
         width: 42px;
         height: 42px;
         cursor: pointer;
